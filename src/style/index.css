@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    /* Primary */
+    --desaturated-dark-cyan: hsl(180, 29%, 50%);
+    /* Neutral */
+    --light-grayish-cyan-bg: hsl(180, 52%, 96%);
+    --light-grayish-cyan-filter: hsl(180, 31%, 95%);
+    --dark-grayish-cyan: hsl(180, 8%, 52%);
+    --very-dark-grayish-cyan: hsl(180, 14%, 20%);
+    /* Weights */
+    --bold: 500;
+    --bolder: 700;
+}
+
+* {
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+}
+
+body {
+    font-size: 15px;
+    font-family: 'League Spartan', sans-serif;
+    background:var(--light-grayish-cyan-bg);
+}
+header {
+    background: var(--desaturated-dark-cyan);
+}
+.job__title {
+    color:var(--desaturated-dark-cyan);
+}
+.new {
+    background: var(--desaturated-dark-cyan);
+}
+.featured {
+    background: var(--very-dark-grayish-cyan);
+}
+.gray {
+    color:var(--dark-grayish-cyan);
+}
+.light-grayish-cyan-filter {
+    background:var(--light-grayish-cyan-filter);
+}
+.language-btn {
+    color: var(--desaturated-dark-cyan);
+    background: var(--light-grayish-cyan-bg);
+    padding: 0.3em;
+    font-weight: 600;
+    border-radius: 0.3em;
+    font-size: 1em;
+}
+.language-btn:hover {
+    background: var(--desaturated-dark-cyan);
+    color:var(--light-grayish-cyan-filter);
+    transition: 0.2s ease-in-out;
+}
+.border-left-active {
+    border-left: 5px solid var(--desaturated-dark-cyan);
+}
+.btn-filter {
+    border-radius:0.3em;
+    display:flex;
+    align-items:center;
+    padding-left: 0.4em;
+    gap:0.4em;
+    background:var(--light-grayish-cyan-bg);
+    color:var(--desaturated-dark-cyan);
+    font-weight: 700;
+    overflow:hidden;
+}
+
+.btn-remove {
+    background:var(--desaturated-dark-cyan);
+    height: 100%;
+    padding: 0.4em;
+}
+.btn-remove:hover {
+    background:var(--very-dark-grayish-cyan);
+    transition:0.4s ease-in-out;
+}
+.btn-clear {
+    color: var(--desaturated-dark-cyan);
+    font-weight: 700;
+}
+.btn-clear:hover {
+    text-decoration: underline;
+    color: var(--desaturated-dark-cyan);
+    transition: 0.4s ease-in-out;
+}
+
+.border-mobile-bottom {
+    border-bottom: 2px solid transparent;
+}
+
+@media only screen and (max-width: 768px) {
+    .border-mobile-bottom {
+        border-bottom: 2px solid var(--dark-grayish-cyan);
+    }
+}
